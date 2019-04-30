@@ -1,7 +1,7 @@
 <div class="container-fluid bg-gris py-5">
 	<div class="container">
 		<!--Titulo carusel-->
-		<div class="row mb-4 mx-auto">
+		<div class="row mb-4 ">
 			<div class="col-md-8">
 				<p class="subtitle">
 					¡Date prisa, que la oferta se termina!
@@ -21,10 +21,10 @@
 		</div><!--FIN Titulo carusel-->		
 
 		<!--Todos los Item-->
-	    <div class="row mx-auto my-auto">
+	    <div class="row my-auto">
 	        <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
 	            <div class="carousel-inner w-100" role="listbox">
-	                <div class="carousel-item active mx-auto">
+	                <div class="carousel-item active">
 	                	<div class="col-12 col-md-3">
 	                		<div class="card">
 								<div class="card-imagen">
