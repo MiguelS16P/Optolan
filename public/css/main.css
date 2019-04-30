@@ -1,0 +1,106 @@
+/*Estilos en Comun para toda la web*/
+
+.bg-gris{
+    background-color: #f7f7f9;
+}
+
+.bd-title {    
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    margin-bottom: 0;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #8C111B;
+    font-weight: 500;
+}
+
+.link {
+    margin-bottom: 0;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #8C111B;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+/*FIN Estilos en Comun para toda la web*/
+
+/*Estilos Cabecera superior*/
+.borde-inferior{
+	border-bottom: solid 1px #adb5bd;
+}
+
+.redes-sociales {
+    padding: .5rem 1rem;
+    display: inline-block;
+}
+
+.fa-facebook, .fa-facebook-square {
+    color: #3b5998;
+    font-size: 20px;
+}
+.fa-youtube, .fa-youtube-play, .fa-youtube-square {
+    color: #bb0000;
+    font-size: 20px;
+}
+.fa-linkedin, .fa-linkedin-square {
+    color: #007bb6;
+    font-size: 20px;
+}
+.fa-instagram {
+    color: #517fa4;
+    font-size: 20px;
+}
+
+/*Estilos Menu principal*/
+
+.logo{
+	width: 180px;
+} 
+
+.navbar-light .navbar-nav .nav-link {
+    color: #636262;
+    font-size: 18px;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(0,0,0,.7);
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.c2-optolan{
+	color: #BF1725;
+}
+
+@media (min-width: 576px) { 
+	
+	.logo{
+		width: 220px;
+	} 
+	
+}
+
+
+
+/**/
+
+.card-imagen{
+    height: 160px;
+    width: 100%;
+    position: relative;
+}
+
+.card-imagen img{
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
