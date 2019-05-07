@@ -32,6 +32,7 @@
         </div>
 
         <div class="pie">
+            @include("layouts.footer")
             @yield("pie")
 
         </div>

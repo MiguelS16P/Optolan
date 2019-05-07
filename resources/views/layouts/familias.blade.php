@@ -22,7 +22,7 @@
 		
 		<!-- Familias -->
 		<div class="row"> 
-			<div class="col-md-2">
+			<div class="col-md-2 col-6">
 				<div class="img-familia">
 					<img src="https://www.sunprored.es/Vistas\template\imagenes\familias\materialelectrico.jpg" class="img-fluid rounded-circle img-thumbnail" alt="">
 				</div>
@@ -32,7 +32,7 @@
 					</h6>
 				</div>				
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-2 col-6">
 				<div class="img-familia">
 					<img src="https://www.sunprored.es/Vistas/template/imagenes/familias/cableestructurado.jpg" class="img-fluid rounded-circle img-thumbnail" alt="">
 				</div>
@@ -42,7 +42,7 @@
 					</h6>
 				</div>				
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-2 col-6">
 				<div class="img-familia">
 					<img src="https://www.sunprored.es/Vistas/template/imagenes/familias/herramientas.jpg" class="img-fluid rounded-circle img-thumbnail" alt="">
 				</div>

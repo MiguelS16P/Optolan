@@ -30,37 +30,47 @@
 								<div class="card-imagen">
 									<img src="https://www.sunprored.es/Vistas/template/imagenes/articulos/CNH69S.jpg"  alt="...">
 								</div>							 	
-							  	<div class="card-body">
-							    	<h5 class="card-title">
-							    		Card title
+							  	<div class="card-body text-center">
+							    	<h5 class="card-title min-height-card">
+							    		Módulo H RJ45 UTP Cat. 6 90º 250 Mhz 1 Gbit tipo sistymax
 							    	</h5>
-							    	<p class="card-text">
-							    		Mini descripcion mini descripcion mini descripcion.
-							    	</p>
-							    	<a href="#" class="btn btn-primary">
-							    		Go somewhere
-							    	</a>
-							  	</div>
+							    	<button class="btn btn-outline-card pt-0 pb-0">
+							    		Visita este articulo
+							    	</button>
+							    	<hr class="my-2">
+							    	<h6>
+							    		Referencia: <span class="badge badge-ref">CNH69S</span>
+							    	</h6>	
+							    	<div class="pro-price">
+                                        <span class="current-price">0.80 € <small>und.</small> </span> <br>
+                                        <del class="origin-price">1.00 € <small>und.</small></del>
+                                    </div>					    	
+							  	</div>							  	
 							</div>
 	                	</div>	                    
 	                </div>
 	                <div class="carousel-item">
-	                	<div class="col-12 col-md-3">
-	                		<div class="card">
+	                	<div class="col-12 col-md-3">	                		
+							<div class="card">
 								<div class="card-imagen">
 									<img src="https://www.sunprored.es/Vistas/template/imagenes/articulos/RTM1LU6.jpg"  alt="...">
 								</div>							 	
-							  	<div class="card-body">
-							    	<h5 class="card-title">
-							    		Card title
+							  	<div class="card-body text-center">
+							    	<h5 class="card-title min-height-card">
+							    		Módulo H RJ45 Cat.6 45x45mm. tipo Legrand
 							    	</h5>
-							    	<p class="card-text">
-							    		Mini descripcion mini descripcion mini descripcion.
-							    	</p>
-							    	<a href="#" class="btn btn-primary">
-							    		Go somewhere
-							    	</a>
-							  	</div>
+							    	<button class="btn btn-outline-card pt-0 pb-0">
+							    		Visita este articulo
+							    	</button>
+							    	<hr class="my-2">
+							    	<h6>
+							    		Referencia: <span class="badge badge-ref">RTM1LU6</span>
+							    	</h6>	
+							    	<div class="pro-price">
+                                        <span class="current-price">2.20 € <small>und.</small> </span> <br>
+                                        <del class="origin-price">3.05 € <small>und.</small></del>
+                                    </div>					    	
+							  	</div>							  	
 							</div>
 	                	</div>
 	                </div>
@@ -70,17 +80,22 @@
 								<div class="card-imagen">
 									<img src="https://www.sunprored.es/Vistas/template/imagenes/articulos/0044CNH6ARS.png"  alt="...">
 								</div>							 	
-							  	<div class="card-body">
-							    	<h5 class="card-title">
-							    		Card title
+							  	<div class="card-body text-center">
+							    	<h5 class="card-title min-height-card">
+							    		Módulo H RJ45 FTP Cat. 6A 180º 250 Mhz 1 Gbit Tipo 3M
 							    	</h5>
-							    	<p class="card-text">
-							    		Mini descripcion mini descripcion mini descripcion.
-							    	</p>
-							    	<a href="#" class="btn btn-primary">
-							    		Go somewhere
-							    	</a>
-							  	</div>
+							    	<button class="btn btn-outline-card pt-0 pb-0">
+							    		Visita este articulo
+							    	</button>
+							    	<hr class="my-2">
+							    	<h6>
+							    		Referencia: <span class="badge badge-ref">CNH6ARS</span>
+							    	</h6>	
+							    	<div class="pro-price">
+                                        <span class="current-price">2.30 € <small>und.</small> </span> <br>
+                                        <del class="origin-price">3.15 € <small>und.</small></del>
+                                    </div>					    	
+							  	</div>							  	
 							</div>
 	                	</div>
 	                </div>
@@ -90,30 +105,36 @@
 								<div class="card-imagen">
 									<img src="https://www.sunprored.es/Vistas/template/imagenes/articulos/RTC6A_new.jpg" alt="...">
 								</div>							 	
-							  	<div class="card-body">
-							    	<h5 class="card-title">
-							    		Card title
+							  	<div class="card-body text-center">
+							    	<h5 class="card-title min-height-card">
+							    		Roseta Cat. 6A UTP sencilla salida latera
 							    	</h5>
-							    	<p class="card-text">
-							    		Mini descripcion mini descripcion mini descripcion.
-							    	</p>
-							    	<a href="#" class="btn btn-primary">
-							    		Go somewhere
-							    	</a>
-							  	</div>
+							    	<button class="btn btn-outline-card pt-0 pb-0">
+							    		Visita este articulo
+							    	</button>
+							    	<hr class="my-2">
+							    	<h6>
+							    		Referencia: <span class="badge badge-ref">RTC6A</span>
+							    	</h6>	
+							    	<div class="pro-price">
+                                        <span class="current-price">19.70 € <small>und.</small> </span> <br>
+                                        <del class="origin-price">30.42 € <small>und.</small></del>
+                                    </div>					    	
+							  	</div>							  	
 							</div>
 	                	</div>
 	                </div>
+
 	            </div>
 
 	            <div class="container">
 	        		<div class="row">
 	          			<div class="col-12 text-right my-2">
-			            	<a class="btn btn-outline-secondary mx-1 prev" href="#recipeCarousel" role="button" data-slide="prev">
+			            	<a class="btn btn-outline-find mx-1 prev" href="#recipeCarousel" role="button" data-slide="prev">
 				             	<i class="fa fa-lg fa-chevron-left"></i>
 				            </a>
 
-				            <a class="btn btn-outline-secondary mx-1 next" href="#recipeCarousel" role="button" data-slide="next">
+				            <a class="btn btn-outline-find mx-1 next" href="#recipeCarousel" role="button" data-slide="next">
 				              	<i class="fa fa-lg fa-chevron-right"></i>
 				            </a>
 			            	

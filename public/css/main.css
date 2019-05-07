@@ -26,7 +26,57 @@
     font-size: 0.8rem;
 }
 
+.badge-ref {
+    color: #fff;
+    background-color: #F20505;
+}
+
+.btn-outline-card {
+    color: #F20505;
+    border-color: #F20505;
+}
+
+.btn-outline-card:focus, .btn-outline-card:hover {
+    color: #fff;
+    background-color: #BF1725;
+}
+
+.btn-outline-find {
+    color: #BF1725;
+    border-color: #BF1725;
+}
+
+.btn-outline-find:focus, .btn-outline-find:hover {
+    color: #fff;
+    background-color: #BF1725;
+}
+
+.pro-price {
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #777;
+}
+
+.current-price {
+    color: #232323;
+    font-size: 18px;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.min-height-card{
+    min-height: 75px;
+}
+
+.bg-optolan{
+    background-color: #BF1725;
+    color: #fff;
+}
+
 /*FIN Estilos en Comun para toda la web*/
+
+
 
 /*Estilos Cabecera superior*/
 .borde-inferior{
@@ -104,3 +154,15 @@
     left: 0;
     right: 0;
 }
+
+
+/*Estilos Footer*/
+
+footer.page-footer .footer-copyright {
+    color: rgba(255,255,255,.6);
+}
+
+footer.page-footer a {
+    color: #fff;
+}
+/*Fin Estilos Footer*/
