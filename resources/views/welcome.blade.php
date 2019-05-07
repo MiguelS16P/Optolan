@@ -1,4 +1,4 @@
-@extends("layouts.inicio")
+@extends("layouts.template-principal")
 
 @section("cabecera")
 	@include("layouts/carusel-inicio")
