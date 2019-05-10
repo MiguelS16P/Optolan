@@ -19,3 +19,13 @@
   transform: translateX(0);
   
 }
+.card-title{
+  font-size: 1.08rem; 
+}
+
+.card{
+  color: #212529;
+}
+.card:focus,.card:hover{
+  border: 2px solid rgba(0, 0, 0, 0.26);
+}

@@ -19,23 +19,23 @@
     </head>
     <body>
         
-        <div class="cabecera">   
+        <section id="cabecera">   
             @include("layouts.cabecera-superior")      
             @include("layouts.menu-principal")   
             @yield("cabecera") 
 
-        </div>
+        </section>
 
-        <div class="cuerpo">
+        <section id="cuerpo">
             @yield("cuerpo")
 
-        </div>
+        </section>
 
-        <div class="pie">
+        <section id="pie">
             @include("layouts.footer")
             @yield("pie")
 
-        </div>
+        </section>
 
         
         <!--JS-->

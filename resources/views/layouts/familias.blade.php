@@ -22,37 +22,19 @@
 		
 		<!-- Familias -->
 		<div class="row"> 
-			<div class="col-md-2 col-6">
-				<div class="img-familia">
-					<img src="https://www.sunprored.es/Vistas\template\imagenes\familias\materialelectrico.jpg" class="img-fluid rounded-circle img-thumbnail" alt="">
+			@foreach ($familias as $key => $value)
+				<div class="col-md-2 col-6">
+					<div class="img-familia">
+					<img src="images/familias/{{$value['img']}}" class="img-fluid rounded-circle img-thumbnail" alt="">
+					</div>
+					<div class="text-familia text-center my-3">
+						<h6 class="subtitle">
+							{{ $value['nombre']}}
+						</h6>
+					</div>				
 				</div>
-				<div class="text-familia text-center my-3">
-					<h6 class="subtitle">
-						Material Eléctrico
-					</h6>
-				</div>				
-			</div>
-			<div class="col-md-2 col-6">
-				<div class="img-familia">
-					<img src="https://www.sunprored.es/Vistas/template/imagenes/familias/cableestructurado.jpg" class="img-fluid rounded-circle img-thumbnail" alt="">
-				</div>
-				<div class="text-familia text-center my-3">
-					<h6 class="subtitle">
-						Cabledo Estructurado
-					</h6>
-				</div>				
-			</div>
-			<div class="col-md-2 col-6">
-				<div class="img-familia">
-					<img src="https://www.sunprored.es/Vistas/template/imagenes/familias/herramientas.jpg" class="img-fluid rounded-circle img-thumbnail" alt="">
-				</div>
-				<div class="text-familia text-center my-3">
-					<h6 class="subtitle">
-						Herramientas, tester y certificadores
-					</h6>
-				</div>				
-			</div>
-			
+			@endforeach
+				
 
 		</div>
 	</div>	

@@ -1,6 +1,6 @@
 <div class="container-fluid borde-inferior">
 	<nav class="container navbar navbar-expand-lg navbar-light">
-	 	<a class="navbar-brand" href="#">
+	 	<a class="navbar-brand" href="/">
 	  		<img src="/images/logo.png" class="logo d-inline-block" alt="optolan technology"> 
 	  	</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,7 +9,7 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav m-auto">				
 				<li class="nav-item">
-					<a class="nav-link" href="#">
+					<a class="nav-link" href="/nuestros-productos">
 						<i class="fas fa-stream c2-optolan"></i> Nuestros Productos
 					</a>
 				</li>
