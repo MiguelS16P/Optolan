@@ -1,10 +1,9 @@
-
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
+<nav class="sidebar sidebar-offcanvas mt-3" id="sidebar">
     <ul class="nav">
         <li class="nav-item nav-profile border-bottom">
             <a href="#" class="nav-link">
                 <div class="nav-profile-image">
-                    <img src="images/face1.jpg" alt="profile">
+                    <img src="{{asset("images/face1.jpg")}}" alt="profile">
                     <span class="login-status online"></span> <!--change to offline or busy as needed-->              
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
@@ -16,33 +15,42 @@
         </li>
 
         <li class="nav-item border-bottom">
-            <a class="nav-link" href="#">
+            <a class="nav-link " href="#">
                 <span class="menu-title">INICIO</span>
                 <i class="fas fa-home ml-auto"></i>
             </a>
         </li>
         
-        @foreach ($familiasAll as $item=>$fam)     
+        @foreach ($familiasAll as $item_fam)     
             <!-- Varible cerrojo -->
             @php $cerrojo = 'cerrado'; @endphp  
 
-            @if ($fam['grupo'] == 'falso' && $fam['parent'] == 0)
-                <!-- Muestra las Familias sin Sub-Categorias -->
-                <li class="nav-item border-bottom">
-                    <a class="nav-link" href="#">
+            @if ($item_fam->grupo == 'FALSO' && $item_fam->claparent == 0)
+                <!-- Muestra las Familias sin Sub-Categorias -->               
+                @if ($item_fam->nomfam == $nombre_fam)
+                <li class="nav-item border-bottom active">
+                @else
+                    <li class="nav-item border-bottom">
+                @endif
+                
+                    <a class="nav-link" href="{{asset($item_fam->url.'/articulos')}}">
                         <span class="menu-title">
-                            {{$fam['nombre']}} 
+                            {{$item_fam->nomfam}} 
                         </span>
                     </a>
                 </li>
                 <!-- FIN Muestra las Familias sin Sub-Categorias -->
 
-            @elseif($fam['grupo'] == 'verdadero')
+            @elseif($item_fam->grupo == 'VERDADERO' && $item_fam->claparent == 0)
                 <!-- Muestra las Familias con Sub-Categorias -->
-                <li class="nav-item border-bottom">
-                    <a class="nav-link" data-toggle="collapse" href="#{{$fam['nombre']}}" aria-expanded="false" aria-controls="{{$fam['nombre']}}">
+                @if ($item_fam->nomfam == $nombre_fam)
+                <li class="nav-item border-bottom active">
+                @else
+                    <li class="nav-item border-bottom">
+                @endif
+                    <a class="nav-link" data-toggle="collapse" href="#{{$item_fam->nomfam}}" aria-expanded="false" aria-controls="{{$item_fam->nomfam}}">
                         <span class="menu-title">
-                            {{$fam['nombre']}}
+                            {{$item_fam->nomfam}} 
                         </span>               
                         <i class="fa fa-angle-left ml-auto"></i>
                         <i class="fas fa-list ml-2"></i>
@@ -50,22 +58,27 @@
                     <!-- FIN Muestra las Familias con Sub-Categorias -->
 
                     <!-- Abre el Sub Menu -->
-                    <div class="collapse " id="{{$fam['nombre']}}">
+                    <div class="collapse " id="{{$item_fam->nomfam}}">
                         <ul class="nav flex-column sub-menu">     
                             @php
                                 $cerrojo = 'abierto';
                             @endphp   
             @endif     
                
-            @foreach ($familiasAll as $item=>$cat) 
-                @if ($cat['parent'] == $fam['id'])   
+            @foreach ($familiasAll as $item_cat) 
+                @if ($item_cat->claparent == $item_fam->id && $item_fam->claparent == 0 )   
 
                             <!-- Muetra nombre de las Sub-categorias -->                     
-                            <li class="nav-item">                                
-                                <a class="nav-link pl-0" href="#">
+                            <li class="nav-item">  
+                                
+                            @if($item_cat->grupo == 'VERDADERO')
+                                <a class="nav-link pl-0" href="{{asset($item_cat->url.'/categorias')}}">
+                            @else
+                                <a class="nav-link pl-0" href="{{asset($item_cat->url.'/articulos')}}">            
+                            @endif                                
                                     <i class="fas fa-angle-double-right"></i>    
                                     <span class="pl-3">
-                                            {{$cat['nombre']}}
+                                        {{$item_cat->nomfam}}                                        
                                     </span>
                                 </a>
                             </li>  
@@ -77,15 +90,6 @@
                     </div>
                 </li><!-- Cierra el Sub Menu -->
                 @endif            
-        @endforeach               
-        
-        <li class="nav-item sidebar-actions">
-            <span class="nav-link">
-                <div class="border-bottom">
-                    <h6 class="font-weight-normal mb-3">Projects</h6>                
-                </div>
-                
-            </span>
-        </li>
+        @endforeach             
     </ul>
 </nav>

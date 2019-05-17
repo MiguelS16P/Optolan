@@ -74,7 +74,29 @@
     color: #fff;
 }
 
+.bg-pdf{
+    color: #8C111B;
+    font-size: 18px;
+}
+
 /*FIN Estilos en Comun para toda la web*/
+
+/*Estilos paginacion*/
+.pagination {
+    justify-content: center;
+}
+
+.page-link {
+    color: rgb(62, 75, 91);
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+/*FIN Estilos paginacion*/
 
 
 

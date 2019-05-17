@@ -26,28 +26,28 @@
 	            <div class="carousel-inner w-100" role="listbox">	                
 					<!--Pinta Todos los Item-->						
 					@php $active = 'active'; @endphp
-					@foreach ($ofertas as $key => $value)
+					@foreach ($ofertas as $item)
 						<div class="carousel-item {{$active}}">
 							<div class="col-12 col-md-3">
 								<a href="#" class="text-decoration-none">
 									<div class="card">
 										<div class="card-imagen">
-											<img src="images/articulos/{{$value['img']}}"  alt="...">
+											<img src="images/articulos/{{$item->imagen}}"  alt="...">
 										</div>							 	
 										<div class="card-body text-center">
 											<h5 class="card-title min-height-card">
-												{{$value['nombre']}}
+												{{$item->nombre}}
 											</h5>
 											<button class="btn btn-outline-card pt-0 pb-0">
 												Visita este articulo
 											</button>
-											<hr class="my-2">
+											<hr class="my-3">
 											<h6>
-												Referencia: <span class="badge badge-ref">{{$value['referencia']}}</span>
+												Referencia: <span class="badge badge-ref">{{$item->codigo}}</span>
 											</h6>	
 											<div class="pro-price">
-												<span class="current-price">{{$value['pvp_real']}} € <small>und.</small> </span> <br>
-												<del class="origin-price">{{$value['pvp_desc']}} € <small>und.</small></del>
+												<span class="current-price">{{$item->pvp1}} € <small>und.</small> </span> <br>
+												<del class="origin-price">{{$item->pvpoferta}} € <small>und.</small></del>
 											</div>					    	
 										</div>							  	
 									</div>

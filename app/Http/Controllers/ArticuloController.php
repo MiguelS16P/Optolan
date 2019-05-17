@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Familia;
+use App\Articulo;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-
-class FamiliaController extends Controller
+class ArticuloController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,43 +16,22 @@ class FamiliaController extends Controller
      */
     public function index()
     {
-        
-        $familiasAll = Familia::where('baja_web','FALSO')
-            ->get();
-
-        $nombre_fam = 'Nuestros Productos';
-
-        $familias = Familia::where("claparent","0")
-            ->where('baja_web','FALSO')
-            ->get();
-
-        return view('familia.index',compact('familias','familiasAll','nombre_fam'));
+        //
     }
 
-    public function get_categorias($url_familia)
-    {
-        // Recojo la url que me envian y 
-        // genero un select para conseguir su ID de Familia. 
-        $id_fam = Familia::where('url',$url_familia)->value('id');              
-        $nombre_fam = Familia::where('url',$url_familia)->value('nomfam');  
+    public function get_articulos($url_familia){
+
+        $id_fam = Familia::where('url',$url_familia)->value('id'); 
+        $nombre_fam = Familia::where('url',$url_familia)->value('nomfam'); 
         
-        $familias = Familia::where('claparent',$id_fam)->get();
-    
-        $familiasAll = Familia::where('baja_web','FALSO')->get();       
-    
-        return view('familia.listar-categorias',compact('familiasAll','familias','nombre_fam'));
-    }
+        $articulos = Articulo::where('clafam',$id_fam)
+            ->where('baja','FALSO')
+            ->paginate();
 
-    
-    
-    public function crear_url(){
+        $familiasAll = Familia::where('baja_web','FALSO')->get();     
 
-        $articulos = Articulo::select('articulos.*','familias.url as url_familia')       
-            ->join('familias','articulos.clafam','=','familias.id')
-            ->get();
-
+        return view('articulo.listar-articulos',compact('articulos','familiasAll','nombre_fam'));
         
-        return view('familia.url',compact('articulos'));
     }
 
     /**

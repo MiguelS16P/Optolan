@@ -39,7 +39,7 @@
   display: flex;
   -webkit-align-items: center;
   align-items: center;
-  white-space: nowrap;
+  white-space: inherit;
   padding: 1.125rem 0 1.125rem 0;
   color: #3e4b5b;
   -webkit-transition-duration: 0.45s;
@@ -67,8 +67,9 @@
 }
 
 .sidebar .nav .nav-item.active > .nav-link .menu-title {
-  color: #b66dff;
+  color: #bf1725;
   font-family: "ubuntu-medium", sans-serif;
+  font-weight: bold;
 }
 
 .sidebar .nav .nav-item.active > .nav-link i {
