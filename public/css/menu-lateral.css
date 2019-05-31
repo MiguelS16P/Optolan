@@ -151,14 +151,17 @@
 }
 
 
-
+.nav-link:hover{
+  color: #c51725;
+}
 .sidebar .nav.sub-menu .nav-item .nav-link.active {
-  color: #b66dff;
+  color: #c51725;
   background: transparent;
 }
 
 .sidebar .nav.sub-menu .nav-item .nav-link:hover {
-  color: #555555;
+  color: #c51725;
+  background: transparent;
 }
 
 .sidebar .nav.sub-menu .nav-item:hover {

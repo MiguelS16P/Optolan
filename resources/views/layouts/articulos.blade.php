@@ -2,8 +2,8 @@
     <div class="row">
         <!--Titulo -->
         <div class="col-12 mb-2 text-center">            
-            <h2 class="bd-title">
-                {{$nombre_fam}}
+            <h2 class="bd-title">           
+                {{$familia_actual->nomfam}}           
                 <small>
                     <i class="fas fa-shopping-cart c2-optolan"></i>
                 </small> 
@@ -20,7 +20,7 @@
     @foreach ($articulos as $articulo)
         <!-- Muestra los articulos -->
         <div class="col-12 col-md-4 mb-3 ">
-            <a href="#" class="text-decoration-none">
+            <a href="{{url('articulos/'.$articulo->id) }}" class="text-decoration-none">
                 <div class="card">
                     <div class="card-imagen">
                         <img src="{{asset('images/articulos/'.$articulo->imagen)}}"  alt="...">

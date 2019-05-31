@@ -27,5 +27,5 @@
   color: #212529;
 }
 .card:focus,.card:hover{
-  border: 2px solid rgba(0, 0, 0, 0.26);
+  border: 1px solid #bf1725;
 }

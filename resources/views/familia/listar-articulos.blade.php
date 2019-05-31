@@ -6,6 +6,6 @@
 @endsection
 
 @section('cuerpo')
-    @include('layouts.articulos')    
+    @include('layouts.articulos')
     
 @endsection

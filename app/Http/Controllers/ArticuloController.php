@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Familia;
+use App\User;
 use App\Articulo;
+use App\Familia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
+
+//para ver que usuraio esta logueado
+use Illuminate\Support\Facades\Auth;
 
 class ArticuloController extends Controller
 {
@@ -14,24 +19,20 @@ class ArticuloController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    
+
+    public function index(Request $request)
     {
-        //
-    }
-
-    public function get_articulos($url_familia){
-
-        $id_fam = Familia::where('url',$url_familia)->value('id'); 
-        $nombre_fam = Familia::where('url',$url_familia)->value('nomfam'); 
         
-        $articulos = Articulo::where('clafam',$id_fam)
-            ->where('baja','FALSO')
-            ->paginate();
 
-        $familiasAll = Familia::where('baja_web','FALSO')->get();     
+        if ($this->type_user()=='admin') {
+            $articulos = Articulo::buscar($request->get('buscar'))->where ('baja','FALSO')->orderBy('codigo')->paginate(13);          
 
-        return view('articulo.listar-articulos',compact('articulos','familiasAll','nombre_fam'));
-        
+            $cad_buscada =$request->get('buscar');
+            return view('admin.list-articulos',compact('articulos','cad_buscada'));           
+        }
+
+        return redirect('/');       
     }
 
     /**
@@ -41,7 +42,7 @@ class ArticuloController extends Controller
      */
     public function create()
     {
-        //
+        return 'en progresooo ...';
     }
 
     /**
@@ -50,6 +51,7 @@ class ArticuloController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    //esta funcion es para crear
     public function store(Request $request)
     {
         //
@@ -63,7 +65,21 @@ class ArticuloController extends Controller
      */
     public function show($id)
     {
-        //
+                
+        if ($this->type_user()=='admin') {
+            
+            $articulo = Articulo::find($id);                
+            return view('admin.ver-articulo',compact('articulo')); 
+        }
+        
+        $articulo = Articulo::find($id);            
+        $familia_actual = $articulo->familia;    
+        $ofertas = Articulo:: where("oferta","1")
+            ->get();            
+        
+        return view('articulo.ver',compact('articulo','familia_actual','ofertas'));
+
+        //return $articulo;
     }
 
     /**
@@ -74,7 +90,17 @@ class ArticuloController extends Controller
      */
     public function edit($id)
     {
-        //
+        if ($this->type_user()=='admin') {
+            
+            $articulo = Articulo::find($id);     
+            
+            $familias = Familia::where('grupo','FALSO')->orderBy('nomfam')->get();
+
+            return view('admin.edit_articulo',compact('articulo','familias')); 
+        }
+
+        return redirect('/');
+        
     }
 
     /**
@@ -86,7 +112,27 @@ class ArticuloController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $articulo = Articulo::findOrFail($id);     
+
+        $entrada_update = $request->all();  
+
+        if($archivo_img = $request->file('imagen')){
+
+            $nombre_img = $archivo_img->getClientOriginalName();
+            $archivo_img->move('images/articulos',$nombre_img);
+            $entrada_update['imagen'] = $nombre_img;           
+        }
+
+        if($archivo_pdf = $request->file('ficha_tecnica')){
+
+            //$nombre_pdf = $archivo_pdf->getClientOriginalName();
+            $nombre_pdf = $articulo->codigo.'.pdf';
+            $archivo_pdf->move('pdf/articulos',$nombre_pdf);
+            $entrada_update['ficha_tecnica'] = $nombre_pdf;
+        }
+
+        $articulo->update($entrada_update);       
+        return redirect("/articulos/".$articulo->id);
     }
 
     /**
@@ -99,4 +145,19 @@ class ArticuloController extends Controller
     {
         //
     }
+
+    private function type_user(){
+        
+        $user = Auth::user();
+        $check = Auth::check();
+
+        if ($check) {
+            if ($user->esAdmin()) {
+                return $user->role->nombre;
+            }
+        }else {
+            return redirect('/');
+        }     
+
+    } 
 }

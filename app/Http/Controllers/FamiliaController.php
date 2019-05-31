@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 
+
 class FamiliaController extends Controller
 {
     /**
@@ -17,33 +18,40 @@ class FamiliaController extends Controller
     public function index()
     {
         
-        $familiasAll = Familia::where('baja_web','FALSO')
+        $familias = Familia::where('baja_web','FALSO')
             ->get();
 
-        $nombre_fam = 'Nuestros Productos';
-
-        $familias = Familia::where("claparent","0")
-            ->where('baja_web','FALSO')
-            ->get();
-
-        return view('familia.index',compact('familias','familiasAll','nombre_fam'));
+        //se enviara otra cosa mas
+        
+        return view('familia.index',compact('familias'));
     }
+
+    
 
     public function get_categorias($url_familia)
     {
         // Recojo la url que me envian y 
         // genero un select para conseguir su ID de Familia. 
-        $id_fam = Familia::where('url',$url_familia)->value('id');              
-        $nombre_fam = Familia::where('url',$url_familia)->value('nomfam');  
+        $familia_actual = Familia::where('url',$url_familia)->first(); 
         
-        $familias = Familia::where('claparent',$id_fam)->get();
+        $familias = Familia::where('claparent',$familia_actual->id)->get();
     
-        $familiasAll = Familia::where('baja_web','FALSO')->get();       
+        return view('familia.listar-categorias',compact('familias','familia_actual'));
+    }  
     
-        return view('familia.listar-categorias',compact('familiasAll','familias','nombre_fam'));
+    public function get_articulos($url_familia){
+
+        $familia_actual = Familia::where('url',$url_familia)->first(); 
+
+        $articulos = Familia::find($familia_actual->id)->articulos()
+        ->where('baja','FALSO')
+        ->paginate();
+        
+        return view('familia.listar-articulos',compact('articulos','familia_actual'));
+        
     }
 
-    
+
     
     public function crear_url(){
 

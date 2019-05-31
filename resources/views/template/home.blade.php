@@ -18,8 +18,10 @@
 
     </head>
     <body>
+            
         
         <section id="cabecera">   
+                
             @include("layouts.cabecera-superior")      
             @include("layouts.menu-principal")   
             @yield("cabecera") 

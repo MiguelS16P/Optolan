@@ -39,19 +39,17 @@
             <div class="container-fluid">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-sm-3 d-none d-sm-block border-right">
-                            @yield("menu-lateral")
-                            
-                        </div>
-                        <div class="col-12 col-sm-9 p-0">
+                        <div class="col-12 p-0">
                             @yield("cuerpo")
 
                         </div>
                     </div>
                 </div>
             </div>
-            
+        </section>
 
+        <section id="oferta">
+            @yield("oferta")
         </section>
 
         <section id="pie">

@@ -10,6 +10,23 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function role(){
+
+        return $this->belongsTo('App\Role');
+    }
+
+    public function esAdmin(){        
+
+        if($this->role->nombre == 'admin'){
+            
+            return true;
+        }
+            return false;
+    }
+
+
+
+
     /**
      * The attributes that are mass assignable.
      *

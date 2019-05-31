@@ -24,37 +24,37 @@
 	    <div class="row my-auto">
 	        <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
 	            <div class="carousel-inner w-100" role="listbox">	                
-					<!--Pinta Todos los Item-->						
-					@php $active = 'active'; @endphp
-					@foreach ($ofertas as $item)
-						<div class="carousel-item {{$active}}">
-							<div class="col-12 col-md-3">
-								<a href="#" class="text-decoration-none">
-									<div class="card">
-										<div class="card-imagen">
-											<img src="images/articulos/{{$item->imagen}}"  alt="...">
-										</div>							 	
-										<div class="card-body text-center">
-											<h5 class="card-title min-height-card">
-												{{$item->nombre}}
-											</h5>
-											<button class="btn btn-outline-card pt-0 pb-0">
-												Visita este articulo
-											</button>
-											<hr class="my-3">
-											<h6>
-												Referencia: <span class="badge badge-ref">{{$item->codigo}}</span>
-											</h6>	
-											<div class="pro-price">
-												<span class="current-price">{{$item->pvp1}} € <small>und.</small> </span> <br>
-												<del class="origin-price">{{$item->pvpoferta}} € <small>und.</small></del>
-											</div>					    	
-										</div>							  	
-									</div>
-								</a>								
-							</div>
-						</div>		
-						@php $active = ''; 	@endphp
+				<!--Pinta Todos los Item-->						
+				@php $active = 'active'; @endphp
+				@foreach ($ofertas as $item)
+					<div class="carousel-item {{$active}}">
+						<div class="col-12 col-md-3">
+							<a href="{{url('articulos/'.$item->id)}}" class="text-decoration-none">
+								<div class="card">
+									<div class="card-imagen">
+									<img src="{{asset('images/articulos/'.$item->imagen)}}"  alt="...">
+									</div>							 	
+									<div class="card-body text-center">
+										<h5 class="card-title min-height-card">
+											{{$item->nombre}}
+										</h5>
+										<button class="btn btn-outline-card pt-0 pb-0">
+											Visita este articulo
+										</button>
+										<hr class="my-3">
+										<h6>
+											Referencia: <span class="badge badge-ref">{{$item->codigo}}</span>
+										</h6>	
+										<div class="pro-price">
+											<span class="current-price">{{$item->pvp1}} € <small>und.</small> </span> <br>
+											<del class="origin-price">{{$item->pvpoferta}} € <small>und.</small></del>
+										</div>					    	
+									</div>							  	
+								</div>
+							</a>								
+						</div>
+					</div>		
+					@php $active = ''; 	@endphp
 					@endforeach	<!-- Fin Pinta Todos los Item-->
 				</div>
 

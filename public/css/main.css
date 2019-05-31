@@ -1,5 +1,13 @@
 /*Estilos en Comun para toda la web*/
 
+a{
+    color: #6c757d;
+}
+
+a:hover {
+    color: #42474c;
+}
+
 .bg-gris{
     background-color: #f7f7f9;
 }
@@ -90,6 +98,10 @@
     color: rgb(62, 75, 91);
 }
 
+.page-link:hover {
+    color: rgb(62, 75, 91);
+}
+
 .page-item.active .page-link {
     z-index: 1;
     color: #fff;
@@ -97,7 +109,6 @@
     border-color: #dc3545;
 }
 /*FIN Estilos paginacion*/
-
 
 
 /*Estilos Cabecera superior*/
@@ -127,6 +138,23 @@
     font-size: 20px;
 }
 
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #ffffff;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #ffffff;
+}
+
+.dropdown-menu {
+    margin: -0.5rem 0 0;
+}
+
+
+
 /*Estilos Menu principal*/
 
 .logo{
@@ -140,13 +168,103 @@
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
     color: rgba(0,0,0,.7);
-    font-weight: 500;
-    font-size: 17px;
+    /*font-weight: 500;*/
+    font-size: 18px;
 }
 
 .c2-optolan{
 	color: #BF1725;
 }
+
+.size-20{
+    font-size: 20px;
+}
+
+.bg-img{
+    color:#031fbb;
+}
+
+.bg-edit{
+    color:#2196F3;
+}
+
+.color-ver{
+    color: #18941d;
+}
+
+.color-edit{
+    color: #ffa929;
+}
+
+.color-borrar{
+    color:#b50c00;
+}
+
+.color-baja{
+    color: #ff2e36;
+}
+
+.color-agrupar{
+    color: #21bbb3;
+}
+
+.check{
+    color: #28a745;
+    font-size: large;
+}
+
+.cross{
+    color: #BF1725;
+    font-size: large;
+}
+
+.img-perfil{
+    max-height: 360px;
+}
+
+
+.additional-details-list {
+    list-style: outside none none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.add-d-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #A5A5A5;
+    margin: 0px;
+    color: #FFF;
+}
+
+.additional-details-list {
+    list-style: outside none none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.additional-details-list li {
+    overflow: hidden;
+    margin: 2px;
+    border: 1px solid #F3F3F3;
+}
+
+.w-space-nowrap{
+    white-space: nowrap;
+}
+
+.line-heing-1-5{
+    line-height: 1.5;
+}
+
+.link-camino-migas{
+    color: #bf1725;
+}
+
+.link-camino-migas:hover{
+    color: #940612;
+}
+
 
 @media (min-width: 576px) { 
 	

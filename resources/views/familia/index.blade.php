@@ -6,7 +6,7 @@
 @endsection
 
 @section('cuerpo')
-    @include('layouts.familias-col-9') 
+    @include('layouts.familias-col-9')
 
 @endsection
 
